@@ -26,8 +26,8 @@
     "noImplicitReturns": true,
     "noImplicitThis": true,
     "noPropertyAccessFromIndexSignature": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
     "outDir": "dist",
     "pretty": true,
     "paths": {
@@ -44,6 +44,6 @@
     "types": [
       "node"
     ],
-    "target": "ESNext",
+    "target": "ESNext"
   }
 }
