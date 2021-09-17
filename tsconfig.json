@@ -1,0 +1,49 @@
+{
+  "include": [
+    "**/*",
+    "**/.*"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "declaration": true,
+    "downlevelIteration": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "incremental": true,
+    "jsx": "react-jsx",
+    "lib": [
+      "es2018",
+      "DOM"
+    ],
+    "moduleResolution": "Node",
+    "module": "commonjs",
+    "noImplicitAny": true,
+    "noImplicitOverride": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "outDir": "dist",
+    "pretty": true,
+    "paths": {
+      "*": [
+        "node_modules",
+        "src"
+      ]
+    },
+    "removeComments": true,
+    "resolveJsonModule": true,
+    "strict": true,
+    "strictPropertyInitialization": true,
+    "skipLibCheck": true,
+    "types": [
+      "node"
+    ],
+    "target": "ESNext",
+  }
+}
