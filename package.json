@@ -1,7 +1,21 @@
 {
   "name": "@mallowigi/eslint-config",
-  "version": "1.0.1",
+  "version": "1.2.0",
+  "author": "Elior Boukhobza <mallowigi@github.com>",
+  "license": "MIT",
   "description": "Mallowigi's ESLint config",
+  "private": false,
+  "homepage": "https://github.com/mallowigi/eslint-config#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mallowigi/eslint-config.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mallowigi/eslint-config/issues"
+  },
+  "engines": {
+    "node": ">=12"
+  },
   "main": "index.js",
   "exports": "./index.js",
   "keywords": [
@@ -19,18 +33,17 @@
     "test": "npm run lint"
   },
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "registry": "https://registry.npmjs.org/",
+    "cache": "cache/.npm"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/mallowigi/eslint-config.git"
+  "badges": {
+    "list": [
+      "npmversion",
+      "daviddm",
+      "daviddmdev"
+    ]
   },
-  "author": "Elior Boukhobza <mallowigi@github.com>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/mallowigi/eslint-config/issues"
-  },
-  "homepage": "https://github.com/mallowigi/eslint-config#readme",
   "devDependencies": {
     "@babel/eslint-parser": "^7.15.4",
     "@babel/preset-react": "^7.14.5",
