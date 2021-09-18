@@ -1,6 +1,6 @@
 {
   "name": "@mallowigi/eslint-config",
-  "version": "3.0.0",
+  "version": "4.0.0",
   "author": "Elior Boukhobza <mallowigi@github.com>",
   "license": "MIT",
   "description": "Mallowigi's ESLint config",
@@ -57,7 +57,7 @@
     "@rushstack/eslint-patch": "1.0.6",
     "confusing-browser-globals": "1.0.10",
     "dot-prop": "6.0.1",
-    "find-up": "5.0.0",
+    "find-up": "6.0.0",
     "read-pkg-up": "8.0.0",
     "semver": "7.3.5",
     "@babel/eslint-parser": "7.15.7",
