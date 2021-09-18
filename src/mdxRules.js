@@ -1,4 +1,4 @@
-/* eslint-disable @typescript-eslint/no-magic-numbers */
-export const mdxRules = {
+/* eslint-disable @typescript-eslint/no-magic-numbers,unicorn/prefer-module */
+module.exports = {
   // add here if necessary
 };

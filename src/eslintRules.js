@@ -1,5 +1,5 @@
-/* eslint-disable @typescript-eslint/no-magic-numbers */
-export const eslintRules = {
+/* eslint-disable @typescript-eslint/no-magic-numbers,unicorn/prefer-module */
+module.exports = {
   'array-bracket-newline': [
     'error',
     {

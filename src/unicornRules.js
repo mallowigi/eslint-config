@@ -1,5 +1,5 @@
-/* eslint-disable @typescript-eslint/no-magic-numbers */
-export const unicornRules = {
+/* eslint-disable @typescript-eslint/no-magic-numbers,unicorn/prefer-module */
+module.exports = {
   'unicorn/better-regex': 'error',
   'unicorn/consistent-function-scoping': [
     'error',

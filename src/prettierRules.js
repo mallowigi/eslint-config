@@ -1,5 +1,5 @@
-/* eslint-disable @typescript-eslint/no-magic-numbers */
-export const prettierRules = {
+/* eslint-disable @typescript-eslint/no-magic-numbers,unicorn/prefer-module */
+module.exports = {
   // add here if necessary
   'prettier/prettier': 'error',
 };

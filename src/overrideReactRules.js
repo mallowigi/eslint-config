@@ -1,4 +1,5 @@
-export const overrideReactRules = [
+/* eslint-disable unicorn/prefer-module */
+module.exports = [
   {
     files: ['*.{jsx,tsx}'],
     rules: {

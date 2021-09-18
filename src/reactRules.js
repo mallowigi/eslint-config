@@ -1,5 +1,5 @@
-/* eslint-disable @typescript-eslint/no-magic-numbers */
-export const reactRules = {
+/* eslint-disable @typescript-eslint/no-magic-numbers,unicorn/prefer-module */
+module.exports = {
   'react/button-has-type': 'error',
   'react/destructuring-assignment': 'error',
   'react/function-component-definition': [

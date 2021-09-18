@@ -1,4 +1,5 @@
-export const overrideTSRules = [
+/* eslint-disable unicorn/prefer-module */
+module.exports = [
   {
     files: ['*.{ts,tsx}'],
     rules: {

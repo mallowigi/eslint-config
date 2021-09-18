@@ -1,5 +1,5 @@
-/* eslint-disable @typescript-eslint/no-magic-numbers */
-export const sonarRules = {
+/* eslint-disable @typescript-eslint/no-magic-numbers,unicorn/prefer-module */
+module.exports = {
   'sonarjs/max-switch-cases': ['error', 10],
   'sonarjs/no-collection-size-mischeck': 'error',
   'sonarjs/no-duplicate-string': ['warn', 5],

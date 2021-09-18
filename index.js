@@ -1,27 +1,27 @@
+/* eslint-disable unicorn/prefer-module,@typescript-eslint/no-var-requires */
 // This is a workaround for: https://github.com/eslint/eslint/issues/3458
-import '@rushstack/eslint-patch/modern-module-resolution';
+require('@rushstack/eslint-patch/modern-module-resolution');
 
-import dotProp from 'dot-prop';
-import { sync } from 'find-up';
-import readPkgUp from 'read-pkg-up';
-import semver from 'semver';
+const dotProp = require('dot-prop');
+const findUp = require('find-up');
+const readPkgUp = require('read-pkg-up');
+const semver = require('semver');
 
-import {
-  eslintRules,
-  i18nRules,
-  importRules,
-  lodashRules,
-  mdxRules,
-  overrideReactRules,
-  prettierRules,
-  promiseRules,
-  reactRules,
-  securityRules,
-  simpleImportsRules,
-  sonarRules,
-  typescriptRules,
-  unicornRules,
-} from './src';
+const eslintRules = require('./src/eslintRules');
+const i18nRules = require('./src/i18nRules');
+const importRules = require('./src/importRules');
+const lodashRules = require('./src/lodashRules');
+const mdxRules = require('./src/mdxRules');
+const overrideReactRules = require('./src/overrideReactRules');
+const prettierRules = require('./src/prettierRules');
+const promiseRules = require('./src/promiseRules');
+const reactRules = require('./src/reactRules');
+const securityRules = require('./src/securityRules');
+const simpleImportsRules = require('./src/simpleImportsRules');
+const sonarRules = require('./src/sonarRules');
+const typescriptRules = require('./src/typescriptRules');
+const unicornRules = require('./src/unicornRules');
+
 
 const packageJson = readPkgUp.sync() ?? {};
 
@@ -29,7 +29,7 @@ const packageJsonContains = dependency =>
   dotProp.get(packageJson, `packageJson.dependencies.${dependency}`) ||
   dotProp.get(packageJson, `packageJson.devDependencies.${dependency}`);
 
-const usesBabelConfig = sync([
+const usesBabelConfig = findUp.sync([
   '.babelrc',
   '.babelrc.json',
   'babel.config.json',
@@ -105,10 +105,7 @@ if (usesReact) {
     ...config.rules,
     ...reactRules,
   };
-  config.overrides = {
-    ...config.overrides,
-    ...overrideReactRules,
-  };
+  config.overrides = [...config.overrides, ...overrideReactRules];
 
   if (semver.gte(reactVersion, '16.8.0')) {
     config.plugins.push('react-hooks');
@@ -138,10 +135,7 @@ if (usesTypeScript) {
     ...config.rules,
     ...typescriptRules,
   };
-  config.overrides = {
-    ...config.overrides,
-    ...overrideReactRules,
-  };
+  config.overrides = [...config.overrides, ...overrideReactRules];
 
 }
 
@@ -181,4 +175,4 @@ if (usesMdx) {
   };
 }
 
-export default config;
+module.exports = config;

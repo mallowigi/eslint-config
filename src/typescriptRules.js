@@ -1,5 +1,5 @@
-/* eslint-disable @typescript-eslint/no-magic-numbers */
-export const typescriptRules = {
+/* eslint-disable @typescript-eslint/no-magic-numbers,unicorn/prefer-module */
+module.exports = {
   // add here if necessary
   '@typescript-eslint/adjacent-overload-signatures': 'error',
   '@typescript-eslint/array-type': 'error',
