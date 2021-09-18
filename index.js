@@ -42,6 +42,8 @@ const usesI18nReact = packageJsonContains('react-i18n');
 const usesTypeScript = packageJsonContains('typescript');
 const usesMdx = packageJsonContains('mdx');
 const usesLodash = packageJsonContains('lodash');
+const usesFlow = packageJsonContains('flow');
+
 const reactVersion = usesReact ? semver.coerce(usesReact).version : undefined;
 
 const config = {
@@ -127,12 +129,11 @@ if (usesTypeScript) {
   dotProp.set(config, 'parser', '@typescript-eslint/parser');
   dotProp.set(config, 'parserOptions.project', 'tsconfig.json');
   config.extends.push(
-    'plugin:flowtype/recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:@typescript-eslint/recommended-requiring-type-checking',
     'plugin:typescript-sort-keys/recommended',
   );
-  config.plugins.push('flowtype', '@typescript-eslint', 'typescript-sort-keys');
+  config.plugins.push('@typescript-eslint', 'typescript-sort-keys');
   config.rules = {
     ...config.rules,
     ...typescriptRules,
@@ -170,6 +171,16 @@ if (usesLodash) {
 if (usesMdx) {
   config.plugins.push('mdx');
   config.extends.push('plugin:mdx/recommended');
+
+  config.rules = {
+    ...config.rules,
+    ...mdxRules,
+  };
+}
+
+if (usesFlow) {
+  config.plugins.push('flowtype');
+  config.extends.push('plugin:flowtype/recommended');
 
   config.rules = {
     ...config.rules,
