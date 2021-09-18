@@ -38,28 +38,33 @@
     "@typescript-eslint/eslint-plugin": "4.31.1",
     "@typescript-eslint/parser": "4.31.1",
     "eslint": "^7.32.0",
-    "eslint-config-airbnb": "^18.2.1",
-    "eslint-config-airbnb-typescript": "^14.0.0",
     "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-boundaries": "^2.4.2",
     "eslint-plugin-flowtype": "5.7.2",
     "eslint-plugin-html": "^6.1.2",
+    "eslint-plugin-i18n-json": "^3.1.0",
     "eslint-plugin-import": "^2.24.2",
     "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-lodash": "^7.3.0",
+    "eslint-plugin-mdx": "^1.15.1",
     "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-promise": "^5.1.0",
     "eslint-plugin-react": "^7.25.2",
     "eslint-plugin-react-hooks": "^4.2.0",
+    "eslint-plugin-react-i18n": "^1.0.3",
+    "eslint-plugin-security": "^1.4.0",
     "eslint-plugin-simple-import-sort": "^7.0.0",
     "eslint-plugin-sonarjs": "^0.10.0",
     "eslint-plugin-sort-keys-fix": "1.1.2",
-    "eslint-plugin-typescript-sort-keys": "1.8.0",
+    "eslint-plugin-typescript-sort-keys": "^1.8.0",
+    "eslint-plugin-unicorn": "^36.0.0",
     "prettier": "^2.4.1",
     "typescript": "4.4.3"
   },
   "peerDependencies": {
+    "@types/lodash": "^4.14.173",
     "@types/react": "^17.0.21",
+    "lodash": "^4.17.21",
     "react": "^17.0.2"
-  },
-  "dependencies": {
-    "eslint-plugin-unicorn": "^36.0.0"
   }
 }
