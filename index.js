@@ -13,6 +13,7 @@ const importRules = require('./src/importRules');
 const lodashRules = require('./src/lodashRules');
 const mdxRules = require('./src/mdxRules');
 const overrideReactRules = require('./src/overrideReactRules');
+const overrideTSRules = require('./src/overrideTSRules');
 const prettierRules = require('./src/prettierRules');
 const promiseRules = require('./src/promiseRules');
 const reactRules = require('./src/reactRules');
@@ -58,6 +59,7 @@ const config = {
     'plugin:sonarjs/recommended',
     'plugin:security/recommended',
   ],
+  overrides: [],
   parser: '@babel/eslint-parser',
   parserOptions: {
     allowImportExportEverywhere: true,
@@ -105,7 +107,7 @@ if (usesReact) {
     ...config.rules,
     ...reactRules,
   };
-  config.overrides = [...config.overrides, ...overrideReactRules];
+  config.overrides.push(...overrideReactRules);
 
   if (semver.gte(reactVersion, '16.8.0')) {
     config.plugins.push('react-hooks');
@@ -135,7 +137,7 @@ if (usesTypeScript) {
     ...config.rules,
     ...typescriptRules,
   };
-  config.overrides = [...config.overrides, ...overrideReactRules];
+  config.overrides.push(...overrideTSRules);
 
 }
 

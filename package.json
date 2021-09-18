@@ -1,6 +1,6 @@
 {
   "name": "@mallowigi/eslint-config",
-  "version": "1.4.7",
+  "version": "1.5.0",
   "author": "Elior Boukhobza <mallowigi@github.com>",
   "license": "MIT",
   "description": "Mallowigi's ESLint config",
@@ -34,7 +34,11 @@
   "scripts": {
     "lint": "eslint .",
     "lint:fix": "eslint --fix",
-    "test": "npm run lint"
+    "test": "npm run lint",
+    "major": "npm version major",
+    "minor": "npm version minor",
+    "patch": "npm version patch",
+    "pub": "npm publish"
   },
   "publishConfig": {
     "access": "public",
