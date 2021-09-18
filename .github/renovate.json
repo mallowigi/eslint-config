@@ -1,6 +1,6 @@
 {
   "labels": ["dependencies"],
-  "bumpVersion": "major",
+  "bumpVersion": "patch",
   "commitBodyTable": true,
   "prHourlyLimit": 6,
   "prConcurrentLimit": 6,
