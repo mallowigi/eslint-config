@@ -11,7 +11,8 @@
     "plugin:@typescript-eslint/recommended-requiring-type-checking",
     "plugin:react/recommended",
     "plugin:jsx-a11y/recommended",
-    "plugin:prettier/recommended"
+    "plugin:prettier/recommended",
+    "plugin:sonarjs/recommended"
   ],
   "overrides": [
     {
@@ -20,16 +21,18 @@
       ],
       "rules": {
         "@typescript-eslint/naming-convention": "off",
+        "@typescript-eslint/restrict-plus-operands": "error",
         "arrow-parens": "off",
         "func-style": "error"
       }
     },
     {
       "files": [
-        "*.{ts}"
+        "*.ts"
       ],
       "rules": {
         "@typescript-eslint/explicit-function-return-type": "error",
+        "@typescript-eslint/restrict-plus-operands": "error",
         "@typescript-eslint/explicit-member-accessibility": "error",
         "func-style": "error"
       }
@@ -50,11 +53,15 @@
     "react",
     "react-hooks",
     "unicorn",
-    "@typescript-eslint"
+    "import",
+    "simple-import-sort",
+    "@typescript-eslint",
+    "sonarjs"
   ],
   "rules": {
     "@typescript-eslint/adjacent-overload-signatures": "error",
     "@typescript-eslint/array-type": "error",
+    "@typescript-eslint/restrict-plus-operands": "off",
     "@typescript-eslint/ban-types": "error",
     "@typescript-eslint/brace-style": "error",
     "@typescript-eslint/class-literal-property-style": "error",
@@ -191,7 +198,6 @@
       }
     ],
     "@typescript-eslint/require-await": "error",
-    "@typescript-eslint/restrict-plus-operands": "error",
     "@typescript-eslint/restrict-template-expressions": "error",
     "@typescript-eslint/return-await": "error",
     "@typescript-eslint/semi": [
@@ -239,7 +245,21 @@
     "constructor-super": "error",
     "curly": [
       "error",
-      "multi"
+      "multi-line"
+    ],
+    "sonarjs/max-switch-cases": [
+      "error",
+      10
+    ],
+    "sonarjs/no-collection-size-mischeck": "error",
+    "sonarjs/no-duplicated-branches": "error",
+    "sonarjs/no-identical-functions": "error",
+    "sonarjs/no-inverted-boolean-check": "error",
+    "sonarjs/no-nested-switch": "error",
+    "sonarjs/no-redundant-boolean": "error",
+    "sonarjs/no-duplicate-string": [
+      "warn",
+      5
     ],
     "default-case": "warn",
     "default-case-last": "error",
@@ -266,10 +286,7 @@
     "id-length": "error",
     "id-match": "error",
     "import/order": "off",
-    "indent": [
-      "error",
-      2
-    ],
+    "indent": "off",
     "jsx-quotes": [
       "error",
       "prefer-single"
@@ -343,7 +360,7 @@
     "no-lonely-if": "error",
     "no-loop-func": "off",
     "no-magic-numbers": "off",
-    "no-mixed-operators": "error",
+    "no-mixed-operators": "off",
     "no-multi-assign": "error",
     "no-multi-spaces": "error",
     "no-multi-str": "error",
@@ -533,8 +550,14 @@
     "use-isnan": "error",
     "valid-typeof": "off",
     "vars-on-top": "warn",
+    "simple-import-sort/imports": "error",
+    "simple-import-sort/exports": "error",
+    "import/first": "error",
+    "import/newline-after-import": "error",
+    "import/no-duplicates": "error",
     "yield-star-spacing": "error",
     "unicorn/better-regex": "error",
+    "unicorn/filename-case": "off",
     "unicorn/error-message": "error",
     "unicorn/consistent-function-scoping": [
       "error",
