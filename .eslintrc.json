@@ -12,7 +12,6 @@
     "plugin:flowtype/recommended",
     "plugin:react/recommended",
     "plugin:jsx-a11y/recommended",
-    "plugin:prettier/recommended",
     "plugin:sonarjs/recommended",
     "plugin:lodash/recommended",
     "plugin:promise/recommended",
@@ -42,8 +41,13 @@
         "@typescript-eslint/explicit-function-return-type": "error",
         "@typescript-eslint/explicit-member-accessibility": "error",
         "@typescript-eslint/no-invalid-this": "error",
+        "@typescript-eslint/no-unsafe-argument": "error",
+        "@typescript-eslint/no-unsafe-assignment": "error",
         "@typescript-eslint/no-unsafe-member-access": "error",
+        "@typescript-eslint/no-unsafe-return": "error",
         "@typescript-eslint/restrict-plus-operands": "error",
+        "@typescript-eslint/restrict-template-expressions": "error",
+        "@typescript-eslint/strict-boolean-expressions": "error",
         "func-style": "error"
       }
     }
@@ -73,7 +77,8 @@
     "mdx",
     "i18n-json",
     "typescript-sort-keys",
-    "react-i18n"
+    "react-i18n",
+    "sort-keys-fix"
   ],
   "rules": {
     "@typescript-eslint/adjacent-overload-signatures": "error",
@@ -180,11 +185,11 @@
     "@typescript-eslint/no-unnecessary-condition": "error",
     "@typescript-eslint/no-unnecessary-type-assertion": "error",
     "@typescript-eslint/no-unnecessary-type-constraint": "error",
-    "@typescript-eslint/no-unsafe-argument": "error",
-    "@typescript-eslint/no-unsafe-assignment": "error",
+    "@typescript-eslint/no-unsafe-argument": "off",
+    "@typescript-eslint/no-unsafe-assignment": "off",
     "@typescript-eslint/no-unsafe-call": "off",
     "@typescript-eslint/no-unsafe-member-access": "off",
-    "@typescript-eslint/no-unsafe-return": "error",
+    "@typescript-eslint/no-unsafe-return": "off",
     "@typescript-eslint/no-unused-expressions": "warn",
     "@typescript-eslint/no-unused-vars": "warn",
     "@typescript-eslint/no-useless-constructor": "error",
@@ -216,7 +221,7 @@
     ],
     "@typescript-eslint/require-await": "error",
     "@typescript-eslint/restrict-plus-operands": "off",
-    "@typescript-eslint/restrict-template-expressions": "error",
+    "@typescript-eslint/restrict-template-expressions": "off",
     "@typescript-eslint/return-await": "error",
     "@typescript-eslint/semi": [
       "error",
@@ -232,16 +237,26 @@
       }
     ],
     "@typescript-eslint/space-infix-ops": "error",
-    "@typescript-eslint/strict-boolean-expressions": "error",
+    "@typescript-eslint/strict-boolean-expressions": "off",
     "@typescript-eslint/switch-exhaustiveness-check": "warn",
     "@typescript-eslint/triple-slash-reference": "error",
     "@typescript-eslint/type-annotation-spacing": "error",
     "@typescript-eslint/unbound-method": "error",
     "@typescript-eslint/unified-signatures": "error",
+    "array-bracket-newline": [
+      "error",
+      {
+        "minItems": 3,
+        "multiline": true
+      }
+    ],
     "array-callback-return": "error",
     "array-element-newline": [
       "error",
-      "consistent"
+      {
+        "minItems": 3,
+        "multiline": true
+      }
     ],
     "arrow-body-style": "error",
     "arrow-parens": [
@@ -293,7 +308,10 @@
     "import/newline-after-import": "error",
     "import/no-duplicates": "error",
     "import/order": "off",
-    "indent": "off",
+    "indent": [
+      "error",
+      2
+    ],
     "jsx-quotes": [
       "error",
       "prefer-single"
@@ -435,7 +453,6 @@
     "prefer-rest-params": "error",
     "prefer-spread": "error",
     "prefer-template": "error",
-    "prettier/prettier": "error",
     "quote-props": [
       "error",
       "consistent-as-needed"
@@ -562,7 +579,8 @@
     "sonarjs/no-nested-switch": "error",
     "sonarjs/no-redundant-boolean": "error",
     "sort-imports": "off",
-    "sort-keys": "warn",
+    "sort-keys": "off",
+    "sort-keys-fix/sort-keys-fix": "warn",
     "space-before-blocks": "error",
     "space-before-function-paren": "off",
     "space-infix-ops": "off",

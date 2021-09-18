@@ -1,1 +1,184 @@
-module.exports = require('./.eslintrc.json');
+// This is a workaround for: https://github.com/eslint/eslint/issues/3458
+import '@rushstack/eslint-patch/modern-module-resolution';
+
+import dotProp from 'dot-prop';
+import { sync } from 'find-up';
+import readPkgUp from 'read-pkg-up';
+import semver from 'semver';
+
+import {
+  eslintRules,
+  i18nRules,
+  importRules,
+  lodashRules,
+  mdxRules,
+  overrideReactRules,
+  prettierRules,
+  promiseRules,
+  reactRules,
+  securityRules,
+  simpleImportsRules,
+  sonarRules,
+  typescriptRules,
+  unicornRules,
+} from './src';
+
+const packageJson = readPkgUp.sync() ?? {};
+
+const packageJsonContains = dependency =>
+  dotProp.get(packageJson, `packageJson.dependencies.${dependency}`) ||
+  dotProp.get(packageJson, `packageJson.devDependencies.${dependency}`);
+
+const usesBabelConfig = sync([
+  '.babelrc',
+  '.babelrc.json',
+  'babel.config.json',
+]);
+const usesPrettier = packageJsonContains('prettier');
+const usesReact = packageJsonContains('react');
+const usesI18n = packageJsonContains('i18next');
+const usesI18nReact = packageJsonContains('react-i18n');
+const usesTypeScript = packageJsonContains('typescript');
+const usesMdx = packageJsonContains('mdx');
+const usesLodash = packageJsonContains('lodash');
+const reactVersion = usesReact ? semver.coerce(usesReact).version : undefined;
+
+const config = {
+  env: {
+    'browser': true,
+    'commonjs': true,
+    'es2021': true,
+    'node': true,
+    'shared-node-browser': true,
+  },
+  extends: [
+    'eslint:recommended',
+    'plugin:unicorn/recommended',
+    'plugin:promise/recommended',
+    'plugin:sonarjs/recommended',
+    'plugin:security/recommended',
+  ],
+  parser: '@babel/eslint-parser',
+  parserOptions: {
+    allowImportExportEverywhere: true,
+    ecmaVersion: 2021,
+    requireConfigFile: false,
+    sourceType: 'module',
+  },
+  plugins: [
+    'import',
+    'simple-import-sort',
+    'security',
+    'promise',
+    'sonarjs',
+    'unicorn',
+    'sort-keys-fix',
+  ],
+  reportUnusedDisableDirectives: true,
+  rules: {
+    ...eslintRules,
+    ...importRules,
+    ...simpleImportsRules,
+    ...promiseRules,
+    ...securityRules,
+    ...sonarRules,
+    ...unicornRules,
+  },
+  settings: {},
+};
+
+if (usesI18n) {
+  config.plugins.push('i18n-json');
+  config.extends.push('plugin:i18n-json/recommended');
+  config.rules = {
+    ...config.rules,
+    ...i18nRules,
+  };
+}
+
+if (usesReact) {
+  dotProp.set(config, 'parserOptions.ecmaFeatures.jsx', true);
+  dotProp.set(config, 'settings.react.version', 'detect');
+  config.extends.push('plugin:react/recommended');
+  config.plugins.push('react');
+  config.rules = {
+    ...config.rules,
+    ...reactRules,
+  };
+  config.overrides = {
+    ...config.overrides,
+    ...overrideReactRules,
+  };
+
+  if (semver.gte(reactVersion, '16.8.0')) {
+    config.plugins.push('react-hooks');
+    config.extends.push('plugin:react-hooks/recommended');
+  }
+
+  config.plugins.push('jsx-a11y');
+  config.extends.push('plugin:jsx-a11y/recommended');
+
+  if (usesI18nReact) {
+    config.plugins.push('react-i18n');
+    config.extends.push('plugin:react-i18n/recommended');
+  }
+}
+
+if (usesTypeScript) {
+  dotProp.set(config, 'parser', '@typescript-eslint/parser');
+  dotProp.set(config, 'parserOptions.project', 'tsconfig.json');
+  config.extends.push(
+    'plugin:flowtype/recommended',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:@typescript-eslint/recommended-requiring-type-checking',
+    'plugin:typescript-sort-keys/recommended',
+  );
+  config.plugins.push('flowtype', '@typescript-eslint', 'typescript-sort-keys');
+  config.rules = {
+    ...config.rules,
+    ...typescriptRules,
+  };
+  config.overrides = {
+    ...config.overrides,
+    ...overrideReactRules,
+  };
+
+}
+
+if (usesBabelConfig) {
+  dotProp.set(config, 'parserOptions.babelOptions.configFile', usesBabelConfig);
+  dotProp.set(config, 'parserOptions.requireConfigFile', true);
+} else if (usesReact) {
+  dotProp.set(config, 'parserOptions.babelOptions.presets', ['@babel/preset-react']);
+}
+
+if (usesPrettier) {
+  config.plugins.push('prettier');
+  config.extends.push('plugin:prettier/recommended');
+  config.rules = {
+    ...config.rules,
+    ...prettierRules,
+  };
+}
+
+if (usesLodash) {
+  config.plugins.push('lodash');
+  config.extends.push('plugin:lodash/recommended');
+
+  config.rules = {
+    ...config.rules,
+    ...lodashRules,
+  };
+}
+
+if (usesMdx) {
+  config.plugins.push('mdx');
+  config.extends.push('plugin:mdx/recommended');
+
+  config.rules = {
+    ...config.rules,
+    ...mdxRules,
+  };
+}
+
+export default config;
