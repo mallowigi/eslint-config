@@ -1,5 +1,35 @@
 {
+  "labels": ["dependencies"],
+  "bumpVersion": "major",
+  "commitBodyTable": true,
+  "prHourlyLimit": 6,
+  "prConcurrentLimit": 6,
+  "packageRules": [
+    {
+      "semanticCommitType": "chore",
+      "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
+      "automerge": true,
+      "semanticCommits": true
+    },
+    {
+      "matchPackagePatterns": ["eslint"],
+      "labels": ["linting"],
+      "groupName": "eslint"
+    },
+    {
+      "matchDepTypes": ["optionalDependencies"],
+      "addLabels": ["optional"]
+    },
+    {
+      "matchDepTypes": ["peerDependencies"],
+      "addLabels": ["peer"],
+      "matchUpdateTypes": ["patch", "minor"],
+      "groupName": "peerDependencies (non-major)",
+      "groupSlug": "peer-dependencies"
+    }
+  ],
   "extends": [
-    "config:base"
+    "config:js-lib",
+    "packages:eslint"
   ]
 }
