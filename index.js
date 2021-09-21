@@ -1,9 +1,10 @@
 /* eslint-disable unicorn/prefer-module,@typescript-eslint/no-var-requires */
 // This is a workaround for: https://github.com/eslint/eslint/issues/3458
+import readPkgUp from 'read-pkg-up';
+
 require('@rushstack/eslint-patch/modern-module-resolution');
 
 const dotProp = require('dot-prop');
-const readPkgUp = require('read-pkg-up');
 const semver = require('semver');
 
 const eslintRules = require('./src/eslintRules');
