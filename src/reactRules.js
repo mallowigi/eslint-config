@@ -62,7 +62,7 @@ module.exports = {
   'react/jsx-props-no-spreading': 'error',
   'react/jsx-sort-default-props': 'error',
   'react/jsx-sort-props': 'error',
-  'react/jsx-space-before-closing': 'error',
+  'react/jsx-tag-spacing': 'error',
   'react/jsx-wrap-multilines': 'error',
   'react/no-access-state-in-setstate': 'error',
   'react/no-did-mount-set-state': 'error',
