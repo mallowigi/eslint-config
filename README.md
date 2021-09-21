@@ -32,8 +32,8 @@ Each and every single rule has been meticulously poured over and purposefully ha
 
 ## Install
 
-```
-$ npm install -D eslint @mallowigi/eslint-config
+```shell
+npm install -D eslint @mallowigi/eslint-config
 ```
 
 ## Usage
@@ -68,7 +68,7 @@ module.exports = {
 Once your rules are configured, we recommend running the following command in your `package.json` as
 an [npm script](https://docs.npmjs.com/cli/v7/using-npm/scripts).
 
-```
+```shell
 eslint . --ext .js --ext .json
 ```
 

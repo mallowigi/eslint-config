@@ -7,7 +7,7 @@ repository:
   # name: template
 
   # A short description of the repository that will show up on GitHub.
-#  description: DYUI
+  # description:
 
   # A URL with more information about the repository
   # homepage: https://example.github.io/

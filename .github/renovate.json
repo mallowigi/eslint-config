@@ -1,31 +1,62 @@
 {
-  "labels": ["dependencies"],
+  "labels": [
+    "dependencies"
+  ],
   "bumpVersion": "patch",
   "commitBodyTable": true,
   "prHourlyLimit": 6,
   "prConcurrentLimit": 6,
   "packageRules": [
     {
+      "matchUpdateTypes": [
+        "minor",
+        "patch",
+        "pin",
+        "digest"
+      ],
       "semanticCommitType": "chore",
-      "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
       "automerge": true,
       "semanticCommits": true
     },
     {
-      "matchPackagePatterns": ["eslint"],
-      "labels": ["linting"],
-      "groupName": "eslint"
+      "matchPackagePatterns": [
+        "eslint"
+      ],
+      "labels": [
+        "linting"
+      ],
+      "groupName": "eslint",
+      "semanticCommitType": "chore",
+      "automerge": true,
+      "semanticCommits": true
     },
     {
-      "matchDepTypes": ["optionalDependencies"],
-      "addLabels": ["optional"]
+      "matchDepTypes": [
+        "optionalDependencies"
+      ],
+      "addLabels": [
+        "optional"
+      ],
+      "semanticCommitType": "chore",
+      "automerge": true,
+      "semanticCommits": true
     },
     {
-      "matchDepTypes": ["peerDependencies"],
-      "addLabels": ["peer"],
-      "matchUpdateTypes": ["patch", "minor"],
+      "matchDepTypes": [
+        "peerDependencies"
+      ],
+      "addLabels": [
+        "peer"
+      ],
+      "matchUpdateTypes": [
+        "patch",
+        "minor"
+      ],
       "groupName": "peerDependencies (non-major)",
-      "groupSlug": "peer-dependencies"
+      "groupSlug": "peer-dependencies",
+      "semanticCommitType": "chore",
+      "automerge": true,
+      "semanticCommits": true
     }
   ],
   "extends": [
