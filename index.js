@@ -3,7 +3,6 @@
 require('@rushstack/eslint-patch/modern-module-resolution');
 
 const dotProp = require('dot-prop');
-const findUp = require('find-up');
 const readPkgUp = require('read-pkg-up');
 const semver = require('semver');
 
@@ -30,11 +29,7 @@ const packageJsonContains = dependency =>
   dotProp.get(packageJson, `packageJson.dependencies.${dependency}`) ||
   dotProp.get(packageJson, `packageJson.devDependencies.${dependency}`);
 
-const usesBabelConfig = findUp.sync([
-  '.babelrc',
-  '.babelrc.json',
-  'babel.config.json',
-]);
+const usesBabelConfig = packageJsonContains('babel');
 const usesPrettier = packageJsonContains('prettier');
 const usesReact = packageJsonContains('react');
 const usesI18n = packageJsonContains('i18next');
