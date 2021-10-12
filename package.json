@@ -60,7 +60,7 @@
     "ansi-regex": ">=6.0.1",
     "underscore": ">=1.12.1",
     "dot-prop": "6.0.1",
-    "read-pkg-up": "7.0.1",
+    "read-pkg-up": "8.0.0",
     "semver": "7.3.5",
     "@babel/eslint-parser": "7.15.8",
     "@babel/preset-react": "7.14.5",
