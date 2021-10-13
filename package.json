@@ -1,6 +1,6 @@
 {
   "name": "@mallowigi/eslint-config",
-  "version": "1.8.20",
+  "version": "1.8.21",
   "author": "Elior Boukhobza <mallowigi@github.com>",
   "license": "MIT",
   "description": "Mallowigi's ESLint config",
@@ -54,7 +54,7 @@
   },
   "dependencies": {
     "@babel/core": "7.15.8",
-    "@rushstack/eslint-patch": "1.0.7",
+    "@rushstack/eslint-patch": "1.0.8",
     "confusing-browser-globals": "1.0.10",
     "trim": ">=0.0.3",
     "ansi-regex": ">=6.0.1",
