@@ -69,7 +69,7 @@
     "@typescript-eslint/parser": "5.0.0",
     "eslint": "8.0.1",
     "eslint-config-prettier": "8.3.0",
-    "eslint-plugin-boundaries": "2.4.2",
+    "eslint-plugin-boundaries": "2.5.0",
     "eslint-plugin-flowtype": "6.1.0",
     "eslint-plugin-i18n-json": "3.1.0",
     "eslint-plugin-import": "2.25.2",
