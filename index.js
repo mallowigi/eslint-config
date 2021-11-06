@@ -85,8 +85,11 @@ const config = {
   },
   settings: {},
 };
+console.log('Installing packages: import, security, promise, sonarjs, unicorn, sort-keys');
+
 
 if (usesI18n) {
+  console.log('Project uses i18n, adding i18n rules');
   config.plugins.push('i18n-json');
   config.extends.push('plugin:i18n-json/recommended');
   config.rules = {
@@ -96,6 +99,7 @@ if (usesI18n) {
 }
 
 if (usesReact) {
+  console.log('Project uses react, adding react rules');
   dotProp.set(config, 'parserOptions.ecmaFeatures.jsx', true);
   dotProp.set(config, 'settings.react.version', 'detect');
   config.extends.push('plugin:react/recommended');
@@ -107,6 +111,7 @@ if (usesReact) {
   config.overrides.push(...overrideReactRules);
 
   if (semver.gte(reactVersion, '16.8.0')) {
+    console.log('Project uses react hooks, adding react hooks rules');
     config.plugins.push('react-hooks');
     config.extends.push('plugin:react-hooks/recommended');
   }
@@ -115,12 +120,14 @@ if (usesReact) {
   config.extends.push('plugin:jsx-a11y/recommended');
 
   if (usesI18nReact) {
+    console.log('Project uses react i18n, adding react i18n rules');
     config.plugins.push('react-i18n');
     config.extends.push('plugin:react-i18n/recommended');
   }
 }
 
 if (usesTypeScript) {
+  console.log('Project uses typescript, adding typescript rules');
   dotProp.set(config, 'parser', '@typescript-eslint/parser');
   dotProp.set(config, 'parserOptions.project', 'tsconfig.json');
   config.extends.push(
@@ -138,6 +145,7 @@ if (usesTypeScript) {
 }
 
 if (usesBabelConfig) {
+  console.log('Project uses babel, adding babel rules');
   dotProp.set(config, 'parserOptions.babelOptions.configFile', usesBabelConfig);
   dotProp.set(config, 'parserOptions.requireConfigFile', true);
 } else if (usesReact) {
@@ -145,6 +153,8 @@ if (usesBabelConfig) {
 }
 
 if (usesPrettier) {
+  console.log('Project uses prettier, adding prettier rules');
+
   config.plugins.push('prettier');
   config.extends.push('plugin:prettier/recommended');
   config.rules = {
@@ -154,6 +164,8 @@ if (usesPrettier) {
 }
 
 if (usesLodash) {
+  console.log('Project uses lodash, adding lodash rules');
+
   config.plugins.push('lodash');
   config.extends.push('plugin:lodash/recommended');
 
@@ -164,6 +176,8 @@ if (usesLodash) {
 }
 
 if (usesMdx) {
+  console.log('Project uses mdx, adding mdx rules');
+
   config.plugins.push('mdx');
   config.extends.push('plugin:mdx/recommended');
 
@@ -174,6 +188,8 @@ if (usesMdx) {
 }
 
 if (usesFlow) {
+  console.log('Project uses flow, adding flow rules');
+
   config.plugins.push('flowtype');
   config.extends.push('plugin:flowtype/recommended');
 
