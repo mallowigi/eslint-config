@@ -1,6 +1,6 @@
 {
   "name": "@mallowigi/eslint-config",
-  "version": "1.8.4",
+  "version": "1.8.5",
   "author": "Elior Boukhobza <mallowigi@github.com>",
   "license": "MIT",
   "description": "Mallowigi's ESLint config",
@@ -74,10 +74,10 @@
     "eslint-plugin-sonarjs": "0.10.0",
     "eslint-plugin-sort-keys-fix": "1.1.2",
     "eslint-plugin-typescript-sort-keys": "2.0.0",
-    "eslint-plugin-unicorn": "38.0.0"
+    "eslint-plugin-unicorn": "38.0.1"
   },
   "devDependencies": {
-    "@types/node": "16.9.4",
+    "@types/node": "16.11.6",
     "confusing-browser-globals": "1.0.10",
     "read-pkg-up": "7.0.1",
     "dot-prop": "6.0.1",
