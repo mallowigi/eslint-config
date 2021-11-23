@@ -1,6 +1,6 @@
 {
   "name": "@mallowigi/eslint-config",
-  "version": "1.8.18",
+  "version": "1.8.19",
   "author": "Elior Boukhobza <mallowigi@github.com>",
   "license": "MIT",
   "description": "Mallowigi's ESLint config",
@@ -73,7 +73,7 @@
     "eslint-plugin-simple-import-sort": "7.0.0",
     "eslint-plugin-sonarjs": "0.10.0",
     "eslint-plugin-sort-keys-fix": "1.1.2",
-    "eslint-plugin-typescript-sort-keys": "2.0.0",
+    "eslint-plugin-typescript-sort-keys": "2.1.0",
     "eslint-plugin-unicorn": "39.0.0"
   },
   "devDependencies": {
