@@ -65,7 +65,7 @@
     "eslint-plugin-lodash": "7.3.0",
     "eslint-plugin-mdx": "1.16.0",
     "eslint-plugin-prettier": "4.0.0",
-    "eslint-plugin-promise": "5.1.1",
+    "eslint-plugin-promise": "5.2.0",
     "eslint-plugin-react": "7.27.1",
     "eslint-plugin-react-hooks": "4.3.0",
     "eslint-plugin-react-i18n": "1.0.3",
