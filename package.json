@@ -71,7 +71,7 @@
     "eslint-plugin-react-i18n": "1.0.3",
     "eslint-plugin-security": "1.4.0",
     "eslint-plugin-simple-import-sort": "7.0.0",
-    "eslint-plugin-sonarjs": "0.10.0",
+    "eslint-plugin-sonarjs": "0.11.0",
     "eslint-plugin-sort-keys-fix": "1.1.2",
     "eslint-plugin-typescript-sort-keys": "2.1.0",
     "eslint-plugin-unicorn": "39.0.0"
