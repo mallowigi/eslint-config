@@ -1,6 +1,6 @@
 {
   "name": "@mallowigi/eslint-config",
-  "version": "1.8.25",
+  "version": "1.8.26",
   "author": "Elior Boukhobza <mallowigi@github.com>",
   "license": "MIT",
   "description": "Mallowigi's ESLint config",
@@ -95,7 +95,7 @@
     "@types/lodash": "^4.14.176",
     "@types/react": "^17.0.34",
     "lodash": "^4.17.21",
-    "prettier": "2.5.0",
+    "prettier": "2.5.1",
     "react": "^17.0.2"
   }
 }
