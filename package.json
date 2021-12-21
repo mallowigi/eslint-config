@@ -1,6 +1,6 @@
 {
   "name": "@mallowigi/eslint-config",
-  "version": "1.8.39",
+  "version": "1.8.40",
   "author": "Elior Boukhobza <mallowigi@github.com>",
   "license": "MIT",
   "description": "Mallowigi's ESLint config",
@@ -77,7 +77,7 @@
     "eslint-plugin-unicorn": "39.0.0"
   },
   "devDependencies": {
-    "@types/node": "16.11.14",
+    "@types/node": "16.11.15",
     "confusing-browser-globals": "1.0.11",
     "read-pkg-up": "7.0.1",
     "dot-prop": "6.0.1",
