@@ -1,6 +1,6 @@
 {
   "name": "@mallowigi/eslint-config",
-  "version": "1.8.43",
+  "version": "1.8.44",
   "author": "Elior Boukhobza <mallowigi@github.com>",
   "license": "MIT",
   "description": "Mallowigi's ESLint config",
@@ -51,9 +51,9 @@
     ]
   },
   "dependencies": {
-    "@babel/core": "7.16.5",
+    "@babel/core": "7.16.7",
     "@babel/eslint-parser": "7.16.5",
-    "@babel/preset-react": "7.16.5",
+    "@babel/preset-react": "7.16.7",
     "@typescript-eslint/eslint-plugin": "5.8.1",
     "@typescript-eslint/parser": "5.8.1",
     "eslint": "8.5.0",
