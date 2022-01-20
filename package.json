@@ -1,6 +1,6 @@
 {
   "name": "@mallowigi/eslint-config",
-  "version": "1.8.50",
+  "version": "1.8.51",
   "author": "Elior Boukhobza <mallowigi@github.com>",
   "license": "MIT",
   "description": "Mallowigi's ESLint config",
@@ -84,7 +84,7 @@
     "semver": "7.3.5",
     "@rushstack/eslint-patch": "1.1.0",
     "prettier": "2.5.1",
-    "typescript": "4.5.4"
+    "typescript": "4.5.5"
   },
   "optionalDependencies": {
     "ansi-regex": ">=6.0.1",
