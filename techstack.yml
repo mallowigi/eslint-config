@@ -1,11 +1,12 @@
 repo_name: mallowigi/eslint-config
 report_id: 9c0f69ad0a42b917d74118e949d30d6f
+version: 0.1
 repo_type: Public
-timestamp: '2023-11-19T07:54:24+00:00'
+timestamp: '2024-01-05T08:37:05+00:00'
 requested_by: renovate[bot]
 provider: github
 branch: master
-detected_tools_count: 30
+detected_tools_count: 31
 tools:
 - name: JavaScript
   description: Lightweight, interpreted, object-oriented language with first-class
@@ -16,6 +17,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Languages
   image_url: https://img.stackshare.io/service/1209/javascript.jpeg
+  detection_source_url: https://github.com/mallowigi/eslint-config
   detection_source: Repo Metadata
 - name: TypeScript
   description: A superset of JavaScript that compiles to clean JavaScript output
@@ -27,7 +29,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Languages
   image_url: https://img.stackshare.io/service/1612/bynNY5dJ.jpg
-  detection_source_url: package-lock.json
+  detection_source_url: https://github.com/mallowigi/eslint-config/blob/master/package-lock.json
   detection_source: package.json
   last_updated_by: renovate[bot]
   last_updated_on: 2022-08-05 08:04:06.000000000 Z
@@ -41,6 +43,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Frameworks (Full Stack)
   image_url: https://img.stackshare.io/service/1014/IoPy1dce_400x400.png
+  detection_source_url: https://github.com/mallowigi/eslint-config/blob/master/package.json
   detection_source: package.json
   last_updated_by: Elior
   last_updated_on: 2021-09-15 13:12:33.000000000 Z
@@ -53,6 +56,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Frameworks (Full Stack)
   image_url: https://img.stackshare.io/service/1011/n1JRsFeB_400x400.png
+  detection_source_url: https://github.com/mallowigi/eslint-config/blob/master/package.json
   detection_source: package.json
   last_updated_by: Elior
   last_updated_on: 2021-09-15 13:12:33.000000000 Z
@@ -66,7 +70,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: JavaScript Compilers
   image_url: https://img.stackshare.io/service/2739/-1wfGjNw.png
-  detection_source_url: package-lock.json
+  detection_source_url: https://github.com/mallowigi/eslint-config/blob/master/package-lock.json
   detection_source: package.json
   last_updated_by: renovate[bot]
   last_updated_on: 2022-08-05 08:04:06.000000000 Z
@@ -79,6 +83,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Code Review
   image_url: https://img.stackshare.io/service/3337/Q4L7Jncy.jpg
+  detection_source_url: https://github.com/mallowigi/eslint-config/blob/master/package.json
   detection_source: package.json
   last_updated_by: Elior
   last_updated_on: 2021-09-15 13:12:33.000000000 Z
@@ -90,6 +95,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Version Control System
   image_url: https://img.stackshare.io/service/1046/git.png
+  detection_source_url: https://github.com/mallowigi/eslint-config
   detection_source: Repo Metadata
 - name: GitHub Actions
   description: Automate your workflow from idea to production
@@ -99,6 +105,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Continuous Integration
   image_url: https://img.stackshare.io/service/11563/actions.png
+  detection_source_url: https://github.com/mallowigi/eslint-config/blob/master/.github/workflows/quality-checks.yml
   detection_source: ".github/workflows/quality-checks.yml"
   last_updated_by: renovate[bot]
   last_updated_on: 2023-03-25 07:47:09.000000000 Z
@@ -110,6 +117,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Package Managers
   image_url: https://img.stackshare.io/service/2637/6I3oEOP4_400x400.jpg
+  detection_source_url: https://github.com/mallowigi/eslint-config/blob/master/package.json
   detection_source: package.json
   last_updated_by: Elior
   last_updated_on: 2021-09-15 13:12:33.000000000 Z
@@ -123,10 +131,10 @@ tools:
   category: Build, Test, Deploy
   sub_category: Code Review
   image_url: https://img.stackshare.io/service/7035/default_66f265943abed56bcdbfca1c866a4261b1fbb063.jpg
-  detection_source_url: package-lock.json
+  detection_source_url: https://github.com/mallowigi/eslint-config/blob/master/package-lock.json
   detection_source: package.json
   last_updated_by: renovate[bot]
-  last_updated_on: 2023-03-25 07:45:24.000000000 Z
+  last_updated_on: 2023-11-19 08:05:41.000000000 Z
 - name: Snyk
   description: Automatically find &amp; fix vulnerabilities in your code, containers,
     Kubernetes, and Terraform
@@ -136,6 +144,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Code Review
   image_url: https://img.stackshare.io/service/5326/6p1SNAJu.jpg
+  detection_source_url: https://github.com/mallowigi/eslint-config/blob/master/.snyk
   detection_source: ".snyk"
   last_updated_by: Elior
   last_updated_on: 2021-09-18 10:52:15.000000000 Z
@@ -147,6 +156,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Front End Package Manager
   image_url: https://img.stackshare.io/service/1120/lejvzrnlpb308aftn31u.png
+  detection_source_url: https://github.com/mallowigi/eslint-config/blob/master/package.json
   detection_source: package.json
   last_updated_by: Elior
   last_updated_on: 2021-09-15 13:12:33.000000000 Z
@@ -160,7 +170,7 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/15810/default_004658cda9b38934f2871435e9dc15608c86e8be.png
-  detection_source_url: package-lock.json
+  detection_source_url: https://github.com/mallowigi/eslint-config/blob/master/package-lock.json
   detection_source: package.json
   last_updated_by: renovate[bot]
   last_updated_on: 2022-08-05 08:04:06.000000000 Z
@@ -174,7 +184,7 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/15890/default_6743ba96cf149a3c3c68a185199f9705d6eff80e.png
-  detection_source_url: package-lock.json
+  detection_source_url: https://github.com/mallowigi/eslint-config/blob/master/package-lock.json
   detection_source: package.json
   last_updated_by: renovate[bot]
   last_updated_on: 2022-08-05 08:04:06.000000000 Z
@@ -188,10 +198,10 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/15809/default_5e5e8ac63beda29f31f1844df64d4b8247570a66.png
-  detection_source_url: package-lock.json
+  detection_source_url: https://github.com/mallowigi/eslint-config/blob/master/package-lock.json
   detection_source: package.json
   last_updated_by: renovate[bot]
-  last_updated_on: 2023-03-25 07:44:57.000000000 Z
+  last_updated_on: 2023-11-24 15:51:59.000000000 Z
 - name: "@typescript-eslint/eslint-plugin"
   description: TypeScript plugin for ESLint
   package_url: https://www.npmjs.com/@typescript-eslint/eslint-plugin
@@ -202,10 +212,10 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/15982/default_8b5680d4e916298d08363c291a0d6e34c07ceb15.png
-  detection_source_url: package-lock.json
+  detection_source_url: https://github.com/mallowigi/eslint-config/blob/master/package-lock.json
   detection_source: package.json
   last_updated_by: renovate[bot]
-  last_updated_on: 2023-03-25 07:44:57.000000000 Z
+  last_updated_on: 2023-11-24 15:51:59.000000000 Z
 - name: "@typescript-eslint/parser"
   description: An ESLint custom parser which leverages TypeScript ESTree
   package_url: https://www.npmjs.com/@typescript-eslint/parser
@@ -216,10 +226,10 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/15980/default_732016a20524708efe7a4c77497fe9bfeea19ba6.png
-  detection_source_url: package-lock.json
+  detection_source_url: https://github.com/mallowigi/eslint-config/blob/master/package-lock.json
   detection_source: package.json
   last_updated_by: renovate[bot]
-  last_updated_on: 2023-03-25 07:44:57.000000000 Z
+  last_updated_on: 2023-11-24 15:51:59.000000000 Z
 - name: dot-prop
   description: Get
   package_url: https://www.npmjs.com/dot-prop
@@ -230,7 +240,7 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/17800/default_78858facb60c08d15198eb69a6c7f48463f2c09f.png
-  detection_source_url: package-lock.json
+  detection_source_url: https://github.com/mallowigi/eslint-config/blob/master/package-lock.json
   detection_source: package.json
   last_updated_by: Renovate Bot
   last_updated_on: 2021-12-18 08:29:32.000000000 Z
@@ -244,10 +254,10 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/15879/default_0b10af8ca19c215f781dc07442e75bdc831089d0.png
-  detection_source_url: package-lock.json
+  detection_source_url: https://github.com/mallowigi/eslint-config/blob/master/package-lock.json
   detection_source: package.json
   last_updated_by: renovate[bot]
-  last_updated_on: 2023-03-25 07:45:24.000000000 Z
+  last_updated_on: 2023-11-19 08:05:41.000000000 Z
 - name: eslint-plugin-flowtype
   description: Flowtype linting rules for ESLint
   package_url: https://www.npmjs.com/eslint-plugin-flowtype
@@ -258,10 +268,10 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/15940/default_f49d4c116f8ea0155f4d92673b084378bba02760.png
-  detection_source_url: package-lock.json
+  detection_source_url: https://github.com/mallowigi/eslint-config/blob/master/package-lock.json
   detection_source: package.json
   last_updated_by: renovate[bot]
-  last_updated_on: 2023-03-25 07:44:57.000000000 Z
+  last_updated_on: 2023-11-24 15:51:59.000000000 Z
 - name: eslint-plugin-import
   description: Import with sanity
   package_url: https://www.npmjs.com/eslint-plugin-import
@@ -272,7 +282,7 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/15806/default_98aa227f51aa9d787815ec3fd98d0ab2bfebbb91.png
-  detection_source_url: package-lock.json
+  detection_source_url: https://github.com/mallowigi/eslint-config/blob/master/package-lock.json
   detection_source: package.json
   last_updated_by: renovate[bot]
   last_updated_on: 2022-08-05 08:04:06.000000000 Z
@@ -286,7 +296,7 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/15845/default_6743ba96cf149a3c3c68a185199f9705d6eff80e.png
-  detection_source_url: package-lock.json
+  detection_source_url: https://github.com/mallowigi/eslint-config/blob/master/package-lock.json
   detection_source: package.json
   last_updated_by: renovate[bot]
   last_updated_on: 2022-08-05 08:04:06.000000000 Z
@@ -300,7 +310,7 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/17604/default_98adc81594c50d81f495d8c0ddd357e31c4f0a3e.png
-  detection_source_url: package-lock.json
+  detection_source_url: https://github.com/mallowigi/eslint-config/blob/master/package-lock.json
   detection_source: package.json
   last_updated_by: renovate[bot]
   last_updated_on: 2022-08-05 08:04:06.000000000 Z
@@ -314,10 +324,10 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/15896/default_6e6e1d6bb189c8bb26c6410618bd597979578f39.png
-  detection_source_url: package-lock.json
+  detection_source_url: https://github.com/mallowigi/eslint-config/blob/master/package-lock.json
   detection_source: package.json
   last_updated_by: renovate[bot]
-  last_updated_on: 2023-03-25 07:45:24.000000000 Z
+  last_updated_on: 2023-11-19 08:05:41.000000000 Z
 - name: eslint-plugin-promise
   description: Enforce best practices for JavaScript promises
   package_url: https://www.npmjs.com/eslint-plugin-promise
@@ -328,7 +338,7 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/15885/default_1d65e37e65b7f80761374f0202776043277d505d.png
-  detection_source_url: package-lock.json
+  detection_source_url: https://github.com/mallowigi/eslint-config/blob/master/package-lock.json
   detection_source: package.json
   last_updated_by: renovate[bot]
   last_updated_on: 2022-08-05 08:04:06.000000000 Z
@@ -342,7 +352,7 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/15817/default_14fd11531839d935f920b6d55bd6f3528c890ad7.png
-  detection_source_url: package-lock.json
+  detection_source_url: https://github.com/mallowigi/eslint-config/blob/master/package-lock.json
   detection_source: package.json
   last_updated_by: renovate[bot]
   last_updated_on: 2022-08-05 08:04:06.000000000 Z
@@ -356,7 +366,7 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/16149/default_1f3a2fc7d882e29a43394ecdf491b8989ea3f0fa.png
-  detection_source_url: package-lock.json
+  detection_source_url: https://github.com/mallowigi/eslint-config/blob/master/package-lock.json
   detection_source: package.json
   last_updated_by: renovate[bot]
   last_updated_on: 2022-08-05 08:04:06.000000000 Z
@@ -370,7 +380,7 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/17069/default_23002b02644a8cb313a0f53f43df271731022a9e.png
-  detection_source_url: package-lock.json
+  detection_source_url: https://github.com/mallowigi/eslint-config/blob/master/package-lock.json
   detection_source: package.json
   last_updated_by: renovate[bot]
   last_updated_on: 2022-08-05 08:04:06.000000000 Z
@@ -384,7 +394,7 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/16871/default_2e3ed47575edcaf407097e6171e3d4cb8681a6b3.png
-  detection_source_url: package-lock.json
+  detection_source_url: https://github.com/mallowigi/eslint-config/blob/master/package-lock.json
   detection_source: package.json
   last_updated_by: renovate[bot]
   last_updated_on: 2022-08-05 08:04:06.000000000 Z
@@ -398,7 +408,28 @@ tools:
   category: Libraries
   sub_category: npm Packages
   image_url: https://img.stackshare.io/package/16895/default_3772c3833c88109974c994fa9f9548ac8ad59f11.png
-  detection_source_url: package-lock.json
+  detection_source_url: https://github.com/mallowigi/eslint-config/blob/master/package-lock.json
   detection_source: package.json
   last_updated_by: Elior
   last_updated_on: 2021-11-06 10:33:31.000000000 Z
+- name: semver
+  description: The semantic version parser used by npm
+  package_url: https://www.npmjs.com/semver
+  version: 6.3.0
+  license: ISC
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/18809/default_dad3dc9dde4b82dc2a7bd32aa091165887abe57b.png
+  detection_source_url: https://github.com/mallowigi/eslint-config/blob/master/package-lock.json
+  detection_source: package.json
+  last_updated_by: Elior
+  last_updated_on: 2021-11-06 10:33:31.000000000 Z
+  vulnerabilities:
+  - name: semver vulnerable to Regular Expression Denial of Service
+    cve_id: CVE-2022-25883
+    cve_url: https://github.com/advisories/GHSA-c2qf-rxjj-qqgw
+    detected_date: Jun 23
+    severity: moderate
+    first_patched: 6.3.1
