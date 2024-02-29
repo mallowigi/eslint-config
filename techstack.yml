@@ -2,7 +2,7 @@ repo_name: mallowigi/eslint-config
 report_id: 9c0f69ad0a42b917d74118e949d30d6f
 version: 0.1
 repo_type: Public
-timestamp: '2024-01-05T08:37:05+00:00'
+timestamp: '2024-02-29T18:50:45+00:00'
 requested_by: renovate[bot]
 provider: github
 branch: master
@@ -122,7 +122,7 @@ tools:
   last_updated_by: Elior
   last_updated_on: 2021-09-15 13:12:33.000000000 Z
 - name: Prettier
-  description: 'Prettier is an opinionated code formatter. '
+  description: Prettier is an opinionated code formatter.
   website_url: https://prettier.io/
   version: 2.8.7
   license: MIT
